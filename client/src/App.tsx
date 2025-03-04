@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { BrainCircuit, Send, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
+import { Sparkles, BrainCircuit, Send, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -112,7 +112,7 @@ export default function App() {
                       </>
                     ) : (
                       <>
-                        <Send className="h-5 w-5 mr-2" />
+                        <Sparkles className="h-5 w-5 mr-2" />
                         Generate Quiz
                       </>
                     )}
@@ -158,7 +158,7 @@ export default function App() {
         {/* Footer */}
         <footer className="py-4 px-4 sm:px-6 lg:px-8 border-t border-slate-700 mt-auto">
           <div className="max-w-7xl mx-auto text-center text-sm text-slate-500">
-            AI Quiz Generator &copy; {new Date().getFullYear()}
+            Powered by Cudos &copy; {new Date().getFullYear()}
           </div>
         </footer>
       </div>

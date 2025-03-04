@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 const AIML_API_URL = "https://api.aimlapi.com/v1/chat/completions";
-const AIML_API_KEY = process.env.SECOND_API_KEY; // Store key in .env
+const AIML_API_KEY = process.env.SECOND_API_KEY; //  key in .env
 
 app.post("/chat", async (req, res) => {
   try {
@@ -18,8 +18,8 @@ app.post("/chat", async (req, res) => {
       AIML_API_URL,
       {
         "frequency_penalty": 1,
-        "max_tokens": 30,  // Reduce token count to prevent long outputs
-        "temperature": 0, // Reduce randomness for structured output
+        "max_tokens": 30,  
+        "temperature": 0, 
         "model": "deepseek/deepseek-chat",
         "messages": [
             { "role": "system", "content": "You generate three multiple-choice quiz questions." },
@@ -34,7 +34,6 @@ app.post("/chat", async (req, res) => {
       }
     );
 
-    // Ensure response structure is handled correctly
     const aiResponse = response.data.choices?.[0]?.message?.content || "No response available";
 
     res.json({ reply: aiResponse });
