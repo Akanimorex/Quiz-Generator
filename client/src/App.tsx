@@ -80,7 +80,7 @@ export default function App() {
         <main className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
           <div className="flex flex-col md:flex-row md:space-x-6">
             {/* Input Section - Hidden on mobile when output tab is active */}
-            <div className={`md:w-1/2 ${activeTab === "output" ? "hidden md:block" : ""}`}>
+            <div className={`md:w-[400px] ${activeTab === "output" ? "hidden md:block" : ""}`}>
               <div className="bg-slate-800 rounded-lg shadow-lg p-4 h-full">
                 <div className="flex items-center mb-4">
                   <BookOpen className="h-5 w-5 text-indigo-400 mr-2" />
@@ -124,7 +124,7 @@ export default function App() {
             </div>
 
             {/* Output Section - Hidden on mobile when input tab is active */}
-            <div className={`md:w-1/2 mt-6 md:mt-0 ${activeTab === "input" ? "hidden md:block" : ""}`}>
+            <div className={`md:w-[400px] mt-6 md:mt-0 ${activeTab === "input" ? "hidden md:block" : ""}`}>
               <div className="bg-slate-800 rounded-lg shadow-lg p-4 h-full">
                 <div className="flex items-center mb-4">
                   <Lightbulb className="h-5 w-5 text-indigo-400 mr-2" />
