@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Sparkles, BrainCircuit, Ellipsis, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
+import { Sparkles, BrainCircuit, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
 
 export default function App() {
   const [text, setText] = useState("");
