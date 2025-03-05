@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { Sparkles, BrainCircuit, Send, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
+import { Sparkles, BrainCircuit, Ellipsis, Loader2, Lightbulb, BookOpen, Table as Tabs } from "lucide-react";
 
 export default function App() {
   const [text, setText] = useState("");
@@ -133,8 +133,10 @@ export default function App() {
                 
                 <div className="bg-slate-900 rounded-lg p-4 min-h-[300px] max-h-[500px] overflow-y-auto">
                   {loading ? (
-                    <div className="flex items-center justify-center h-full">
-                      <Loader2 className="h-8 w-8 text-indigo-400 animate-spin" />
+                    <div className="flex items-center justify-center h-full animate-pulse">
+                      <span className="text-slate-400 italic">Reasoning...</span>
+                      {/* <Loader2 className="h-8 w-8 text-indigo-400 animate-spin" /> */}
+                      {/* <Ellipsis className="h-6 w-6 text-gray-500" /> */}
                     </div>
                   ) : quiz.length > 0 ? (
                     <div className="space-y-4">
