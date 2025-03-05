@@ -13,9 +13,11 @@ export default function App() {
     
     setLoading(true);
     setActiveTab("output");
+    
+
 
     try {
-      const response = await axios.post("http://localhost:5000/chat", { message: text });
+      const response = await axios.post("http://45.45.163.144:5000/chat", { message: text });
       setQuiz(response.data.reply.split("\n"));
     } catch (error) {
       console.error("Error generating quiz:", error);
